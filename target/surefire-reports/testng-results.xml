@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-08-17T10:31:51 CDT" name="E-commerce platform" finished-at="2022-08-17T10:31:52 CDT" duration-ms="617">
+    <groups>
+    </groups>
+    <test started-at="2022-08-17T10:31:51 CDT" name="User registry" finished-at="2022-08-17T10:31:51 CDT" duration-ms="94">
+      <class name="com.testing.app.UserRegistry">
+        <test-method signature="shouldAnswerWithTrue()[pri:0, instance:com.testing.app.UserRegistry@6e75aa0d]" started-at="2022-08-17T10:31:51 CDT" name="shouldAnswerWithTrue" finished-at="2022-08-17T10:31:51 CDT" duration-ms="15" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldAnswerWithTrue -->
+      </class> <!-- com.testing.app.UserRegistry -->
+    </test> <!-- User registry -->
+    <test started-at="2022-08-17T10:31:52 CDT" name="User login" finished-at="2022-08-17T10:31:52 CDT" duration-ms="0">
+    </test> <!-- User login -->
+    <test started-at="2022-08-17T10:31:52 CDT" name="User navigation" finished-at="2022-08-17T10:31:52 CDT" duration-ms="0">
+    </test> <!-- User navigation -->
+    <test started-at="2022-08-17T10:31:52 CDT" name="Scroll test" finished-at="2022-08-17T10:31:52 CDT" duration-ms="0">
+    </test> <!-- Scroll test -->
+    <test started-at="2022-08-17T10:31:52 CDT" name="Product search" finished-at="2022-08-17T10:31:52 CDT" duration-ms="0">
+    </test> <!-- Product search -->
+    <test started-at="2022-08-17T10:31:52 CDT" name="Add to cart" finished-at="2022-08-17T10:31:52 CDT" duration-ms="0">
+    </test> <!-- Add to cart -->
+    <test started-at="2022-08-17T10:31:52 CDT" name="Buy" finished-at="2022-08-17T10:31:52 CDT" duration-ms="0">
+    </test> <!-- Buy -->
+  </suite> <!-- E-commerce platform -->
+</testng-results>

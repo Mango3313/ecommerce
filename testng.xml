@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="E-commerce platform">
+  <test name="User registry">
+      <parameter name="emailid" value="tester456@gmail.com"/>
+      <parameter name="password" value="test@123"/>
+      <classes>
+      <class name="com.testing.app.UserRegistry"/>
+      </classes>
+  </test> <!-- Test --> 
+   
+  <test name="User login">    
+    <parameter name="emailid" value="tester789@gmail.com"/>
+    <classes>
+       <class name="com.testing.app.UserLogin"/>
+    </classes>
+  </test> <!-- Test -->
+
+  <test name="User navigation">    
+    <parameter name="emailid" value="tester789@gmail.com"/>
+    <classes>
+       <class name="com.testing.app.UserNav"/>
+    </classes>
+  </test> <!-- Test -->
+
+  <test name="Scroll test">    
+    <parameter name="emailid" value="tester789@gmail.com"/>
+    <classes>
+       <class name="com.testing.app.ScrollTest"/>
+    </classes>
+  </test> <!-- Test -->
+
+  <test name="Product search">    
+    <parameter name="emailid" value="tester789@gmail.com"/>
+    <classes>
+       <class name="com.testing.app.ProductSearch"/>
+    </classes>
+  </test> <!-- Test -->
+
+  <test name="Add to cart">    
+    <parameter name="emailid" value="tester789@gmail.com"/>
+    <classes>
+       <class name="com.testing.app.AddShoppingCart"/>
+    </classes>
+  </test> <!-- Test -->
+
+  <test name="Buy">    
+    <parameter name="emailid" value="tester789@gmail.com"/>
+    <classes>
+       <class name="com.testing.app.BuyShoppingCart"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
