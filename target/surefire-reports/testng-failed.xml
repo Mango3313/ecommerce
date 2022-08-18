@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [E-commerce platform]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="User registry(failed)" verbose="0">
+    <parameter name="password" value="test@123"/>
+    <parameter name="emailid" value="tester456@gmail.com"/>
+    <classes>
+      <class name="com.testing.app.UserRegistry">
+        <methods>
+          <include name="shouldAnswerWithTrue"/>
+          <include name="configSuite"/>
+        </methods>
+      </class> <!-- com.testing.app.UserRegistry -->
+    </classes>
+  </test> <!-- User registry(failed) -->
+</suite> <!-- Failed suite [E-commerce platform] -->
