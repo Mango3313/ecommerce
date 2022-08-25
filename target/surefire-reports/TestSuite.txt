@@ -1,12 +1,35 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 1.574 s <<< FAILURE! - in TestSuite
-configSuite(com.testing.app.UserRegistry)  Time elapsed: 1.137 s  <<< FAILURE!
-java.lang.Error: 
-Unresolved compilation problems: 
-	path_to_addblock cannot be resolved
-	driver cannot be resolved to a variable
+Tests run: 5, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 104.593 s <<< FAILURE! - in TestSuite
+TC_001_CorrectUserRegister(com.testing.app.AppTest)  Time elapsed: 15.483 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[1]/div[2]/div/div[3]/div/div/form/div[1]/div[1]/div[1]/label"}
+  (Session info: chrome=104.0.5112.102)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'DESKTOP-C2J8233', ip: '192.168.3.26', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [21fc046fa3b9b815525bd390642c38f6, findElement {using=xpath, value=/html/body/div[1]/div[2]/div/div[3]/div/div/form/div[1]/div[1]/div[1]/label}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\daft_\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63997}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63997/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 21fc046fa3b9b815525bd390642c38f6
+	at com.testing.app.AppTest.TC_001_CorrectUserRegister(AppTest.java:72)
 
-	at com.testing.app.UserRegistry.configSuite(UserRegistry.java:23)
+TC_005_UserNavigation(com.testing.app.AppTest)  Time elapsed: 43.094 s  <<< FAILURE!
+org.openqa.selenium.StaleElementReferenceException: 
+stale element reference: element is not attached to the page document
+  (Session info: chrome=104.0.5112.102)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'DESKTOP-C2J8233', ip: '192.168.3.26', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [21fc046fa3b9b815525bd390642c38f6, clickElement {id=6a9d0a86-10a7-47e2-a0b2-fe0781030f0c}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\daft_\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63997}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63997/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (21fc046fa3b9b815525bd390642c38f6)] -> xpath: /html/body/div/div[1]/header/div[2]/div/div/nav/div[1]/a]
+Session ID: 21fc046fa3b9b815525bd390642c38f6
+	at com.testing.app.AppTest.TC_005_UserNavigation(AppTest.java:232)
+
+TC_006_AddToCart(com.testing.app.AppTest)  Time elapsed: 13.291 s  <<< FAILURE!
+java.lang.AssertionError: expected [45.51] but found [43.510002]
+	at com.testing.app.AppTest.TC_006_AddToCart(AppTest.java:273)
 
