@@ -9,19 +9,19 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">E-commerce platform</th></tr>
-<tr><td><a href="#t0">User registry</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num attn">3</td><td class="num">87,158</td><td></td><td></td></tr>
+<tr><td><a href="#t0">User registry</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num attn">6</td><td class="num">277,718</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">E-commerce platform</th></tr></tbody><tbody id="t0"><tr><th colspan="4">User registry &#8212; failed</th></tr><tr class="failedeven"><td rowspan="3">com.testing.app.AppTest</td><td><a href="#m0">TC_001_CorrectUserRegister</a></td><td rowspan="1">1661371525871</td><td rowspan="1">15446</td></tr><tr class="failedeven"><td><a href="#m1">TC_005_UserNavigation</a></td><td rowspan="1">1661371556558</td><td rowspan="1">43094</td></tr><tr class="failedeven"><td><a href="#m2">TC_006_AddToCart</a></td><td rowspan="1">1661371599654</td><td rowspan="1">13294</td></tr><tr><th colspan="4">User registry &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">com.testing.app.AppTest</td><td><a href="#m3">TC_002_CorrectUserLogin</a></td><td rowspan="1">1661371541354</td><td rowspan="1">15202</td></tr><tr class="passedeven"><td><a href="#m4">TC_007_BuyCart</a></td><td rowspan="1">1661371612949</td><td rowspan="1">1</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">E-commerce platform</th></tr></tbody><tbody id="t0"><tr><th colspan="4">User registry &#8212; failed</th></tr><tr class="failedeven"><td rowspan="6">com.testing.app.AppTest</td><td><a href="#m0">TC_001_CorrectUserRegister</a></td><td rowspan="1">1661473819536</td><td rowspan="1">33810</td></tr><tr class="failedeven"><td><a href="#m1">TC_002_InorrectUserRegister</a></td><td rowspan="1">1661473853456</td><td rowspan="1">31061</td></tr><tr class="failedeven"><td><a href="#m2">TC_005_UserNavigation</a></td><td rowspan="1">1661473926528</td><td rowspan="1">54294</td></tr><tr class="failedeven"><td><a href="#m3">TC_006_AddToCart</a></td><td rowspan="1">1661473980823</td><td rowspan="1">19605</td></tr><tr class="failedeven"><td><a href="#m4">TC_006_RemoveFromCart</a></td><td rowspan="1">1661474000428</td><td rowspan="1">31411</td></tr><tr class="failedeven"><td><a href="#m5">TC_007_BuyCart</a></td><td rowspan="1">1661474031842</td><td rowspan="1">65344</td></tr><tr><th colspan="4">User registry &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">com.testing.app.AppTest</td><td><a href="#m6">TC_003_CorrectUserLogin</a></td><td rowspan="1">1661473884518</td><td rowspan="1">19524</td></tr><tr class="passedeven"><td><a href="#m7">TC_004_CorrectUserLogin</a></td><td rowspan="1">1661473904043</td><td rowspan="1">22483</td></tr></tbody>
 </table>
-<h2>User registry</h2><h3 id="m0">com.testing.app.AppTest#TC_001_CorrectUserRegister</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/div[1]/div[2]/div/div[3]/div/div/form/div[1]/div[1]/div[1]/label&quot;}
+<h2>User registry</h2><h3 id="m0">com.testing.app.AppTest#TC_001_CorrectUserRegister</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/div/div[2]/div/div[3]/div/div/form/div[1]/div[1]/div[1]/label/div/span/input&quot;}
   (Session info: chrome=104.0.5112.102)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
 System info: host: &apos;DESKTOP-C2J8233&apos;, ip: &apos;192.168.3.26&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [21fc046fa3b9b815525bd390642c38f6, findElement {using=xpath, value=/html/body/div[1]/div[2]/div/div[3]/div/div/form/div[1]/div[1]/div[1]/label}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\daft_\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63997}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63997/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 21fc046fa3b9b815525bd390642c38f6
+Command: [16e1182cb669fa11f640f9fc0abab6c1, findElement {using=xpath, value=/html/body/div/div[2]/div/div[3]/div/div/form/div[1]/div[1]/div[1]/label/div/span/input}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\daft_\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51658}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51658/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 16e1182cb669fa11f640f9fc0abab6c1
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -33,19 +33,42 @@ Session ID: 21fc046fa3b9b815525bd390642c38f6
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-	at com.testing.app.AppTest.TC_001_CorrectUserRegister(AppTest.java:72)
+	at com.testing.app.AppTest.TC_001_CorrectUserRegister(AppTest.java:74)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 36 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.testing.app.AppTest#TC_005_UserNavigation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+<h3 id="m1">com.testing.app.AppTest#TC_002_InorrectUserRegister</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/div[1]/div[2]/div/div[3]/div/div/form/div[4]/button&quot;}
+  (Session info: chrome=104.0.5112.102)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;DESKTOP-C2J8233&apos;, ip: &apos;192.168.3.26&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [16e1182cb669fa11f640f9fc0abab6c1, findElement {using=xpath, value=/html/body/div[1]/div[2]/div/div[3]/div/div/form/div[4]/button}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\daft_\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51658}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51658/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 16e1182cb669fa11f640f9fc0abab6c1
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at com.testing.app.AppTest.TC_002_InorrectUserRegister(AppTest.java:182)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 36 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.testing.app.AppTest#TC_005_UserNavigation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
   (Session info: chrome=104.0.5112.102)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
 Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
 System info: host: &apos;DESKTOP-C2J8233&apos;, ip: &apos;192.168.3.26&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [21fc046fa3b9b815525bd390642c38f6, clickElement {id=6a9d0a86-10a7-47e2-a0b2-fe0781030f0c}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\daft_\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63997}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63997/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (21fc046fa3b9b815525bd390642c38f6)] -&gt; xpath: /html/body/div/div[1]/header/div[2]/div/div/nav/div[1]/a]
-Session ID: 21fc046fa3b9b815525bd390642c38f6
+Command: [16e1182cb669fa11f640f9fc0abab6c1, clearElement {id=34db6310-bbe2-404c-b49e-70a74c63a2d5}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\daft_\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51658}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51658/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (16e1182cb669fa11f640f9fc0abab6c1)] -&gt; xpath: /html/body/div/div[1]/header/div[3]/div/div/div[2]/form/input[4]]
+Session ID: 16e1182cb669fa11f640f9fc0abab6c1
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -54,15 +77,37 @@ Session ID: 21fc046fa3b9b815525bd390642c38f6
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
-	at com.testing.app.AppTest.TC_005_UserNavigation(AppTest.java:232)
+	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:132)
+	at com.testing.app.AppTest.TC_005_UserNavigation(AppTest.java:261)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 36 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.testing.app.AppTest#TC_006_AddToCart</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [45.51] but found [43.510002]
-	at com.testing.app.AppTest.TC_006_AddToCart(AppTest.java:273)
+<h3 id="m3">com.testing.app.AppTest#TC_006_AddToCart</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: /html/body/div/div[1]/header/div[3]/div/div/div[4]/div[1]/div[2]/div[4]/span (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;DESKTOP-C2J8233&apos;, ip: &apos;192.168.3.26&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\daft_\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51658}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51658/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 16e1182cb669fa11f640f9fc0abab6c1
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at com.testing.app.AppTest.TC_006_AddToCart(AppTest.java:300)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.testing.app.AppTest#TC_006_RemoveFromCart</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [60.02] but found [27.0]
+	at com.testing.app.AppTest.TC_006_RemoveFromCart(AppTest.java:362)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 36 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">com.testing.app.AppTest#TC_002_CorrectUserLogin</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">com.testing.app.AppTest#TC_007_BuyCart</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.testing.app.AppTest#TC_007_BuyCart</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: /html/body/div/div[2]/div/div[3]/div/div/form (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;DESKTOP-C2J8233&apos;, ip: &apos;192.168.3.26&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\daft_\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51658}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51658/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 16e1182cb669fa11f640f9fc0abab6c1
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at com.testing.app.AppTest.TC_007_BuyCart(AppTest.java:412)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">com.testing.app.AppTest#TC_003_CorrectUserLogin</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">com.testing.app.AppTest#TC_004_CorrectUserLogin</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

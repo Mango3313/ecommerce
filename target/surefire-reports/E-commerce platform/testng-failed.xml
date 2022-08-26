@@ -8,7 +8,10 @@
           <include name="TC_005_UserNavigation"/>
           <include name="configSuite"/>
           <include name="TC_006_AddToCart"/>
+          <include name="TC_006_RemoveFromCart"/>
           <include name="TC_001_CorrectUserRegister"/>
+          <include name="TC_002_InorrectUserRegister"/>
+          <include name="TC_007_BuyCart"/>
           <include name="finishSuite"/>
         </methods>
       </class> <!-- com.testing.app.AppTest -->

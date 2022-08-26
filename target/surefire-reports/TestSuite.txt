@@ -1,21 +1,34 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 104.593 s <<< FAILURE! - in TestSuite
-TC_001_CorrectUserRegister(com.testing.app.AppTest)  Time elapsed: 15.483 s  <<< FAILURE!
+Tests run: 8, Failures: 6, Errors: 0, Skipped: 0, Time elapsed: 323.304 s <<< FAILURE! - in TestSuite
+TC_001_CorrectUserRegister(com.testing.app.AppTest)  Time elapsed: 33.908 s  <<< FAILURE!
 org.openqa.selenium.NoSuchElementException: 
-no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[1]/div[2]/div/div[3]/div/div/form/div[1]/div[1]/div[1]/label"}
+no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div/div[2]/div/div[3]/div/div/form/div[1]/div[1]/div[1]/label/div/span/input"}
   (Session info: chrome=104.0.5112.102)
 For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.4.0', revision: 'e5c75ed026a'
 System info: host: 'DESKTOP-C2J8233', ip: '192.168.3.26', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [21fc046fa3b9b815525bd390642c38f6, findElement {using=xpath, value=/html/body/div[1]/div[2]/div/div[3]/div/div/form/div[1]/div[1]/div[1]/label}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\daft_\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63997}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63997/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 21fc046fa3b9b815525bd390642c38f6
-	at com.testing.app.AppTest.TC_001_CorrectUserRegister(AppTest.java:72)
+Command: [16e1182cb669fa11f640f9fc0abab6c1, findElement {using=xpath, value=/html/body/div/div[2]/div/div[3]/div/div/form/div[1]/div[1]/div[1]/label/div/span/input}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\daft_\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51658}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51658/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 16e1182cb669fa11f640f9fc0abab6c1
+	at com.testing.app.AppTest.TC_001_CorrectUserRegister(AppTest.java:74)
 
-TC_005_UserNavigation(com.testing.app.AppTest)  Time elapsed: 43.094 s  <<< FAILURE!
+TC_002_InorrectUserRegister(com.testing.app.AppTest)  Time elapsed: 31.062 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/div[1]/div[2]/div/div[3]/div/div/form/div[4]/button"}
+  (Session info: chrome=104.0.5112.102)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'DESKTOP-C2J8233', ip: '192.168.3.26', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [16e1182cb669fa11f640f9fc0abab6c1, findElement {using=xpath, value=/html/body/div[1]/div[2]/div/div[3]/div/div/form/div[4]/button}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\daft_\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51658}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51658/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 16e1182cb669fa11f640f9fc0abab6c1
+	at com.testing.app.AppTest.TC_002_InorrectUserRegister(AppTest.java:182)
+
+TC_005_UserNavigation(com.testing.app.AppTest)  Time elapsed: 54.295 s  <<< FAILURE!
 org.openqa.selenium.StaleElementReferenceException: 
 stale element reference: element is not attached to the page document
   (Session info: chrome=104.0.5112.102)
@@ -23,13 +36,33 @@ For documentation on this error, please visit: https://selenium.dev/exceptions/#
 Build info: version: '4.4.0', revision: 'e5c75ed026a'
 System info: host: 'DESKTOP-C2J8233', ip: '192.168.3.26', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [21fc046fa3b9b815525bd390642c38f6, clickElement {id=6a9d0a86-10a7-47e2-a0b2-fe0781030f0c}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\daft_\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63997}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63997/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (21fc046fa3b9b815525bd390642c38f6)] -> xpath: /html/body/div/div[1]/header/div[2]/div/div/nav/div[1]/a]
-Session ID: 21fc046fa3b9b815525bd390642c38f6
-	at com.testing.app.AppTest.TC_005_UserNavigation(AppTest.java:232)
+Command: [16e1182cb669fa11f640f9fc0abab6c1, clearElement {id=34db6310-bbe2-404c-b49e-70a74c63a2d5}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\daft_\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51658}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51658/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (16e1182cb669fa11f640f9fc0abab6c1)] -> xpath: /html/body/div/div[1]/header/div[3]/div/div/div[2]/form/input[4]]
+Session ID: 16e1182cb669fa11f640f9fc0abab6c1
+	at com.testing.app.AppTest.TC_005_UserNavigation(AppTest.java:261)
 
-TC_006_AddToCart(com.testing.app.AppTest)  Time elapsed: 13.291 s  <<< FAILURE!
-java.lang.AssertionError: expected [45.51] but found [43.510002]
-	at com.testing.app.AppTest.TC_006_AddToCart(AppTest.java:273)
+TC_006_AddToCart(com.testing.app.AppTest)  Time elapsed: 19.605 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: 
+Expected condition failed: waiting for element to be clickable: By.xpath: /html/body/div/div[1]/header/div[3]/div/div/div[4]/div[1]/div[2]/div[4]/span (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'DESKTOP-C2J8233', ip: '192.168.3.26', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\daft_\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51658}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51658/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 16e1182cb669fa11f640f9fc0abab6c1
+	at com.testing.app.AppTest.TC_006_AddToCart(AppTest.java:300)
+
+TC_006_RemoveFromCart(com.testing.app.AppTest)  Time elapsed: 31.415 s  <<< FAILURE!
+java.lang.AssertionError: expected [60.02] but found [27.0]
+	at com.testing.app.AppTest.TC_006_RemoveFromCart(AppTest.java:362)
+
+TC_007_BuyCart(com.testing.app.AppTest)  Time elapsed: 65.343 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: 
+Expected condition failed: waiting for visibility of element located by By.xpath: /html/body/div/div[2]/div/div[3]/div/div/form (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'DESKTOP-C2J8233', ip: '192.168.3.26', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\daft_\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:51658}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51658/devtoo..., se:cdpVersion: 104.0.5112.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 16e1182cb669fa11f640f9fc0abab6c1
+	at com.testing.app.AppTest.TC_007_BuyCart(AppTest.java:412)
 
