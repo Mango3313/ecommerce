@@ -1,6 +1,8 @@
 package com.testing.app;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
@@ -21,7 +23,9 @@ import org.openqa.selenium.Keys;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.By.ByXPath;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.html5.WebStorage;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -53,11 +57,25 @@ public class AppTest {
             System.err.println(e);
         }
     }
+    @AfterMethod
+    public void logout(){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(10000));
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div/div[1]/header/div[2]/div/div/nav/div[2]/a"))).click();;
+    }
+    @BeforeMethod
+    public void clearCache(){
+        driver.get("http://automationpractice.com/index.php");
+        if (!(driver instanceof WebStorage)) {
+                throw new IllegalArgumentException("This test expects the driver to implement WebStorage");
+            }
+            WebStorage webStorage = (WebStorage)driver;
+            webStorage.getSessionStorage().clear();
+            webStorage.getLocalStorage().clear();
+    }
 
     // User register
     @Test
     public void TC_001_CorrectUserRegister() throws InterruptedException { 
-        driver.get("http://automationpractice.com/index.php");
         FakeValuesService fakeValuesService = new FakeValuesService(
                 new Locale("es-MX"), new RandomService()
                 );
@@ -78,8 +96,8 @@ public class AppTest {
 
         WebElement buttonCreateAccount = driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[3]/div/div/div[1]/form/div/div[3]/button"));
         wait.until(ExpectedConditions.elementToBeClickable(buttonCreateAccount)).click();;
-        //Wait for changes pa que jale jaja 
-        Thread.sleep(7000);
+        //Wait for changes
+        Thread.sleep(10000);
         // Personal Information Page
         // Title
         WebElement inputGender1, inputGender2;
@@ -167,12 +185,14 @@ public class AppTest {
         // Register button
         WebElement buttonRegister = driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[3]/div/div/form/div[4]/button"));
         buttonRegister.click();
-    }
 
+        
+    }
+  
     // Incorrect User  register (Empty fields)
     @Test
     public void TC_002_InorrectUserRegister() throws InterruptedException { 
-        driver.get("http://automationpractice.com/index.php");
+        //driver.get("http://automationpractice.com/index.php");
         Assert.assertEquals(driver.getTitle(), "My Store");
         FakeValuesService fakeValuesService = new FakeValuesService(
                 new Locale("es-MX"), new RandomService()
@@ -192,7 +212,7 @@ public class AppTest {
         WebElement buttonCreateAccount = driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[3]/div/div/div[1]/form/div/div[3]/button"));
         wait.until(ExpectedConditions.elementToBeClickable(buttonCreateAccount)).click();;
         //Wait for changes pa que jale jaja 
-        Thread.sleep(7000);
+        Thread.sleep(10000);
         // Personal Information Page
         // Register button
         WebElement buttonRegister = driver.findElement(By.xpath("/html/body/div[1]/div[2]/div/div[3]/div/div/form/div[4]/button"));
@@ -202,7 +222,7 @@ public class AppTest {
     // User login
     @Test
     public void TC_003_CorrectUserLogin() throws InterruptedException {
-        driver.get("http://automationpractice.com/index.php");
+        //driver.get("http://automationpractice.com/index.php");
         Assert.assertEquals(driver.getTitle(), "My Store");
         FakeValuesService fakeValuesService = new FakeValuesService(
                 new Locale("es-MX"), new RandomService()
@@ -232,7 +252,7 @@ public class AppTest {
     // Incorrect User login (Empty fields)
     @Test
     public void TC_004_CorrectUserLogin() throws InterruptedException {
-        driver.get("http://automationpractice.com/index.php");
+        //driver.get("http://automationpractice.com/index.php");
         Assert.assertEquals(driver.getTitle(), "My Store");
         FakeValuesService fakeValuesService = new FakeValuesService(
                 new Locale("es-MX"), new RandomService()
@@ -255,7 +275,7 @@ public class AppTest {
     // user navigation
     @Test
     public void TC_005_UserNavigation() throws InterruptedException {
-        driver.get("http://automationpractice.com/index.php");
+        //driver.get("http://automationpractice.com/index.php");
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(10000));
         Assert.assertEquals(driver.getTitle(), "My Store");
 
@@ -282,34 +302,37 @@ public class AppTest {
         .findElement(By.xpath("/html/body/div/div[1]/header/div[3]/div/div/div[2]/form/input[4]"));
         search.sendKeys("dress");
         search.sendKeys(Keys.ENTER);
-        search.clear();
+         driver
+        .findElement(By.xpath("/html/body/div/div[1]/header/div[3]/div/div/div[2]/form/input[4]")).clear();
         //wait.until(ExpectedConditions.elementToBeClickable(button)).click();
 
         WebElement search2Element = driver
         .findElement(By.xpath("html/body/div/div[1]/header/div[3]/div/div/div[2]/form/input[4]"));
         search2Element.sendKeys("jeans");
         search2Element.sendKeys(Keys.ENTER);
-        search2Element.clear();
+        driver
+        .findElement(By.xpath("html/body/div/div[1]/header/div[3]/div/div/div[2]/form/input[4]")).clear();
         //wait.until(ExpectedConditions.elementToBeClickable(button)).click();
 
        //wait.until(ExpectedConditions.elementToBeClickable(button)).click();
         WebElement search3Element = driver
         .findElement(By.xpath("html/body/div/div[1]/header/div[3]/div/div/div[2]/form/input[4]"));
         //Falla aqui, no se porque no detecta el input de busqueda
-        wait.until(ExpectedConditions.elementToBeClickable(search)).sendKeys("BloUsE");
-        wait.until(ExpectedConditions.elementToBeClickable(button)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(search3Element)).sendKeys("BloUsE");
+        driver
+        .findElement(By.xpath("/html/body/div/div[1]/header/div[3]/div/div/div[2]/form/button")).click();
 
         WebElement search4Element = driver
         .findElement(By.xpath("html/body/div/div[1]/header/div[3]/div/div/div[2]/form/input[4]"));
-        search.sendKeys("");
-        search.sendKeys(Keys.ENTER);
+        search4Element.sendKeys("");
+        search4Element.sendKeys(Keys.ENTER);
         //wait.until(ExpectedConditions.elementToBeClickable(button)).click();
         
     }
 
     @Test
     public void TC_006_AddToCart() throws InterruptedException {
-        driver.get("http://automationpractice.com/index.php");
+        //driver.get("http://automationpractice.com/index.php");
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(10000));
         Actions actions = new Actions(driver);
         DecimalFormat formatTotal = new DecimalFormat("#.##");
@@ -340,10 +363,10 @@ public class AppTest {
 
     }
     @Test
-    public void TC_006_RemoveFromCart() throws InterruptedException {
-        driver.get("http://automationpractice.com/index.php");
+    public void TC_007_RemoveFromCart() throws InterruptedException {
+        //driver.get("http://automationpractice.com/index.php");
         //Set WebDriverWait, Actions and Decimal format for numbers
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(10000));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(15000));
         Actions actions = new Actions(driver);
         DecimalFormat formatTotal = new DecimalFormat("#.##");
         //Check if the page name is correct
@@ -375,7 +398,7 @@ public class AppTest {
         WebElement deleteFromCartButton = driver.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div/div[2]/table/tbody/tr[1]/td[7]/div/a"));
         deleteFromCartButton.click();
         //Wait for removal to take effect
-        Thread.sleep(5000);
+        Thread.sleep(10000);
         //Get the total before removal
         String totalRemove = driver.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div/div[2]/table/tfoot/tr[1]/td[3]")).getText().replace("$", "");
         Float totalRe = Float.parseFloat(totalRemove);
@@ -389,8 +412,8 @@ public class AppTest {
     }
 
     @Test
-    public void TC_007_BuyCart() {
-        driver.get("http://automationpractice.com/index.php");
+    public void TC_008_BuyCart() {
+        //driver.get("http://automationpractice.com/index.php");
         //Set WebDriverWait, Actions and Decimal format for numbers
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(10000));
         Actions actions = new Actions(driver);
@@ -412,7 +435,7 @@ public class AppTest {
         //Add second item
         WebElement addToCartB2 = driver.findElement(By.xpath("//*[@id='homefeatured']/li[2]/div/div[2]/div[2]/a[1]/span"));
         wait.until(ExpectedConditions.elementToBeClickable(addToCartB2)).click();
-        //Gotocart
+        //Go to cart
         wait.until(ExpectedConditions.elementToBeClickable(
                 By.xpath("/html/body/div/div[1]/header/div[3]/div/div/div[4]/div[1]/div[2]/div[4]/a")
         )).click();
@@ -434,7 +457,23 @@ public class AppTest {
         driver.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div/div/div[2]/form/div/p[2]/button")).click();
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div/div[2]/div/div[3]/div/div/form")));
+        //Continue
+        driver.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div/form/p/button")).click();
 
+        WebElement termsCheck = driver.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div/div/form/div/p[2]/div/span/input"));
+        actions.moveToElement(termsCheck).click().perform();
+
+        driver.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div/form/p/button")).click();
+
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div/div[2]/div/div[3]/div/div/div[3]/div[1]/div/p/a"))).click();
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div/div[2]/div/div[3]/div/form")));
+
+        driver.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div/form/p/button")).click();
+
+        String result = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div/div[2]/div/div[3]/div/div/p/strong"))).getText();
+
+        Assert.assertEquals(result, "Your order on My Store is complete.");
     }
 
     @AfterSuite
